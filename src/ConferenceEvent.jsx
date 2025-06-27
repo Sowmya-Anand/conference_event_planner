@@ -20,6 +20,9 @@ const ConferenceEvent = () => {
         if (venueItems[index].name === "Auditorium Hall (Capacity:200)" && venueItems[index].quantity >= 3) {
           return; 
         }
+        if (venueItems[index].quantity>=10){
+            return;
+        }
         dispatch(incrementQuantity(index));
       };
     
